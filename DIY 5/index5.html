@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Plus minus Buttons</title>
+
+  <style>
+    body {
+      font-family: Georgia, serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #f2f2f2;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    .buttons {
+      margin: 20px;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 8px 15px;
+      margin: 5px;
+      cursor: pointer;
+      border: 2px solid black;
+    }
+
+    .plus {
+      background-color: green;
+      color: black;
+    }
+
+    .minus {
+      background-color: red;
+      color: black;
+    }
+
+    .reset {
+      background-color: lightgray;
+    }
+
+    #number {
+      font-size: 28px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Plus minus Buttons</h1>
+
+  <div class="buttons">
+    <button class="plus" onclick="increment()">+</button>
+    <button class="minus" onclick="decrement()">-</button>
+    <button class="reset" onclick="reset()">reset</button>
+  </div>
+
+  <div id="number">0</div>
+
+  <script>
+    let count = 0;
+
+    function increment() {
+      count++;
+      document.getElementById("number").textContent = count;
+    }
+
+    function decrement() {
+      count--;
+      document.getElementById("number").textContent = count;
+    }
+
+    function reset() {
+      count = 0;
+      document.getElementById("number").textContent = count;
+    }
+  </script>
+
+</body>
+</html>

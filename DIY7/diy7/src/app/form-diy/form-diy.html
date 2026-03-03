@@ -1,0 +1,21 @@
+<div class="form-container">
+  <form [formGroup]="meuForm" (ngSubmit)="onSubmit()">
+    
+    <label>First Name:</label>
+    <input type="text" formControlName="firstName">
+    
+    <label>Last Name:</label>
+    <input type="text" formControlName="lastName">
+    
+    <label>Country:</label>
+    <input type="text" formControlName="country">
+    
+    <label>Note:</label>
+    <input type="text" formControlName="note">
+
+    <div class="button-group">
+      <button type="submit" [disabled]="meuForm.invalid" class="btn-submit">submit</button>
+      <button type="button" (click)="onReset()" class="btn-reset">reset</button>
+    </div>
+  </form>
+</div>
